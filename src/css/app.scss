@@ -1,0 +1,27 @@
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "ALLEGIANT";
+  font-style: normal;
+  font-weight: 400;
+  src: local("ALLEGIANT"), url("../fonts/Allegiant-Regular.woff") format("woff");
+}
+.logo {
+  font-family: Allegiant;
+  font-size: 30px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
